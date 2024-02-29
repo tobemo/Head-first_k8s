@@ -1,8 +1,10 @@
 FROM python:alpine
 
-COPY hello.py requirements.txt /
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
+
+COPY hello.py .
 
 ENV FLASK_APP=./hello.py
 
